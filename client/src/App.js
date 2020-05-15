@@ -1,42 +1,37 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
-import API from "./utils/api";
+import React from 'react';
+import './App.css';
+import Nav from './components/Nav';
+import Footer from './components/Footer';
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import Calendar from './Pages/Calendar1';
+import LoggedIn from './Pages/LoggedIn';
+import About from './Pages/About';
+import Login from './auth/Login';
+import Register from './auth/Register';
+import Wrapper from './components/Wrapper';
 
-class App extends React.Component {
-	// componentDidMount() {
 
-	// API.saveDonations({
-	// 	eventName: "Name of New Event",
-	// 	eventDate: "2020-05-17T01:08:49.643Z",
-	// 	lunchNumber: 300,
-	// 	eventDescription:
-	// 		"These lunches will be available from 11am-2pm, Address Here/Phonenumber",
-	// 	userName: "sampleUsername2",
-	// }).then((res) => console.log(res));
-	// API.allDonations().then((res) => console.log(res.data));
+function App() {
+  return (
+  <div>
 
-	// }
+    <Router >
+     <div className="App">
+     <Nav />
+       <Wrapper>
+             <Route exact path="/" component={Calendar} />
+             <Route exact path="/About" component={About} />
+             <Route exact path="/donor" component={LoggedIn} />
+             <Route exact path="/Register" component={Register} />
+             <Route exact path="/Login" component={Login} />
+       </Wrapper>
+     </div>
+ 
+     <Footer />
+    </Router> 
 
-	render() {
-		return (
-			<div className="App">
-				<header className="App-header">
-					<img src={logo} className="App-logo" alt="logo" />
-					<p>
-						Edit <code>src/App.js</code> and save to reload.
-					</p>
-					<a
-						className="App-link"
-						href="https://reactjs.org"
-						target="_blank"
-						rel="noopener noreferrer">
-						Learn React
-					</a>
-				</header>
-			</div>
-		);
-	}
+  </div>
+  );
 }
 
 export default App;
