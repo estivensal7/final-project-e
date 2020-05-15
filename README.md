@@ -34,7 +34,7 @@ Depolyed using Heroku.
 
 * **Yensey Murillo** - *front-end* - [Yenseydm](https://github.com/yenseydm)
 
-See also the list of [contributors](https://github.com/mbarnetttx/FinalProject/graphs/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/mbarnetttx/FinalProject/graphs/contributors) who participated in this project. We had to recreate our project which caused us to lose our commits can be viewed here.
 
 
 ## Acknowledgments
